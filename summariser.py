@@ -4,7 +4,7 @@ import os
 import streamlit as st
 from openai import OpenAI
 
-#   PDF READER
+# PDF READER
 def readpdf(file):
     doc = fitz.open(stream=file.read(), filetype="pdf")
     nopages = doc.page_count
@@ -18,7 +18,7 @@ def readpdf(file):
 
 #   SETTING UP OPENAI
 load_dotenv()
-client = OpenAI()  # new style OpenAI client uses environment var OPENAI_API_KEY automatically
+client = OpenAI() 
 
 def summarize_text(text):
     response = client.chat.completions.create(
@@ -30,10 +30,10 @@ def summarize_text(text):
     )
     return response.choices[0].message.content
 
-#   WEB BROWSER
+# WEB BROWSER
 st.set_page_config(page_title="Research Paper Summarizer", layout="centered")
 
-# CUSTOM STYLING
+# STYLING
 st.markdown("""
     <style>
     body {
@@ -44,7 +44,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # PAGE CONTENT
-st.markdown("<h1>📑 AI Research Paper Summarizer</h1>", unsafe_allow_html=True)
+st.markdown("<h1>AI Research Paper Summarizer</h1>", unsafe_allow_html=True)
 st.write("Upload a research paper (PDF) and get a summary based on your preferred length.")
 
 uploaded_file = st.file_uploader("Upload PDF", type=["pdf"])
@@ -62,7 +62,7 @@ if uploaded_file:
         with st.spinner("Reading PDF and generating summary..."):
             text = readpdf(uploaded_file)
             summary = summarize_text(text)
-            st.subheader("📝 Summary:")
+            st.subheader("Summary:")
             st.markdown(
                 f"<div style='background-color:#f8f9fa; padding: 1rem; border-radius: 10px; color: #222;'>{summary}</div>",
                 unsafe_allow_html=True
