@@ -22,7 +22,7 @@ client = OpenAI()
 
 def summarize_text(text):
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": "You are an expert research paper summariser. Provide a clear, concise summary of the following research paper."},
             {"role": "user", "content": f"Summarise the following research paper:\n\n{text}"}
