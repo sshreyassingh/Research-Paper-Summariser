@@ -1,14 +1,18 @@
 # 📑 AI Research Paper Summariser
 
-This is a Streamlit-based web app that lets you upload a research paper (PDF) and generates a summary using OpenAI’s GPT-4.  
-It helps researchers, students, and professionals quickly grasp lengthy papers by producing concise summaries.
+A Streamlit-based web app that allows you to upload a research paper (PDF) and generate a concise, customizable summary using OpenAI’s **GPT-4o**.
+
+Ideal for researchers, students, and professionals looking to quickly understand lengthy academic papers.
 
 ---
 
 ## 🚀 Features
 - Upload PDF research papers directly through the web interface.
 - Choose summary length: short, medium, or long.
-- Generates summaries using GPT-4.
+- Choose summary format: paragraph, pointers, or Q&A.
+- Choose language style: simple or academic.
+- Generates summaries using GPT-4o.
+- Supports PDFs with content up to ~8000 tokens (~6000 words)for accurate summarization.
 
 ---
 
@@ -57,12 +61,13 @@ This will open the app in your default browser at `http://localhost:8501`.
 
 ## Important
 - This project **does not include any API key**. You must add your own in `.env`.
-- Summarization uses GPT-4. Ensure your OpenAI account has access.
+- Summarization uses GPT-4o. Ensure your OpenAI account has access.
+- Supports PDF inputs up to ~8000 tokens (~6000 words) for best results.
 
 ---
 
 ## Credits
-Built by Shreya Singh, Saina Suhag, and Saisha Angra as a Generative AI Capstone Project under IGDTUW.
+Built by Shreya Singh, Saina Suhag, and Saisha Angra as a part of Generative AI Capstone Project under IGDTUW.
 
 ---
 
