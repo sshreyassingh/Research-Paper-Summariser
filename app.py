@@ -17,7 +17,7 @@ st.markdown("""
 
 # PAGE CONTENT
 st.markdown("<h1>AI Research Paper Summarizer</h1>", unsafe_allow_html=True)
-st.write("Upload a research paper (PDF) and get a summary based on your preferred length.")
+st.write("Upload a research paper (PDF) and get a summary based in your preferred length, format, and style.")
 
 uploaded_file = st.file_uploader("Upload PDF", type=["pdf"])
 
