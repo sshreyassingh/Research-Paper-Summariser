@@ -43,12 +43,12 @@ language = st.radio(
 )
 
 maxtokens = 8000
-maxtokens = maxtokens * 4 
+maxcharacters = maxtokens * 4 
 
 if uploaded_file:
     st.success("✅ File uploaded!")
     text = readpdf(uploaded_file)
-    if len(text) > MAX_CHARS:
+    if len(text) > maxcharacters:
         st.warning("⚠️ The uploaded document is too long. Please upload a shorter file or summarize a section.")
     else:
         if st.button("Generate Summary"):
