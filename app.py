@@ -43,7 +43,7 @@ language = st.radio(
 )
 
 maxtokens = 8000
-maxtokens = MAX_TOKENS * 4 
+maxtokens = maxtokens * 4 
 
 if uploaded_file:
     st.success("✅ File uploaded!")
